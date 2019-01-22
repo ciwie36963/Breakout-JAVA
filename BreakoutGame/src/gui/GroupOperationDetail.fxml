@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root id="AnchorPane" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="152.0" layoutY="129.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitle" text="Groepsbewerking details">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Label>
+            <JFXComboBox fx:id="cmbGrouOpSorts" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></JFXComboBox>
+            <HBox fx:id="hBoxGroupOpContent" style=": ;">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></HBox>
+            <HBox alignment="TOP_RIGHT" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="btnSave" onAction="#saveGroupOp" styleClass="button-raised" text="Opslaan Groepbewerking" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</fx:root>

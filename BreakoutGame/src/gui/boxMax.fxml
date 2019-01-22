@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="pane" prefHeight="800.0" prefWidth="950.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTabPane fx:id="tabBox" prefHeight="750.0" prefWidth="950.0" stylesheets="@assets/css/style2.css" VBox.vgrow="ALWAYS">
+               <tabs>
+                  <Tab style="-fx-background-color: #114f8a; -fx-padding: 0 105 0 105;" text="Acties ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane maxWidth="950.0" prefHeight="715.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtName" focusColor="WHITE" labelFloat="true" layoutX="198.0" layoutY="121.0" prefHeight="35.0" prefWidth="227.0" promptText="Name" style="-fx-background-color: transparent;" stylesheets="@assets/css/style2.css" unFocusColor="WHITE" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="525.0">
+                                       <font>
+                                          <Font name="Roboto" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="wit" />
+                                          <String fx:value="witprompt" />
+                                          <String fx:value="avenir" />
+                                          <String fx:value="p" />
+                                       </styleClass>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtDescription" focusColor="WHITE" labelFloat="true" layoutX="509.0" layoutY="121.0" prefHeight="35.0" prefWidth="227.0" promptText="Description" style="-fx-background-color: transparent;" stylesheets="@assets/css/style2.css" unFocusColor="WHITE" AnchorPane.leftAnchor="509.0" AnchorPane.rightAnchor="214.0">
+                                       <font>
+                                          <Font name="Roboto" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="wit" />
+                                          <String fx:value="witprompt" />
+                                          <String fx:value="avenir" />
+                                          <String fx:value="p" />
+                                       </styleClass>
+                                    </JFXTextField>
+                                    <VBox fx:id="vBoxCollections" layoutX="115.0" layoutY="264.0" prefHeight="391.0" prefWidth="711.0" spacing="50.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="264.0">
+                                       <children>
+                                          <HBox fx:id="hBoxActions" prefHeight="326.0" prefWidth="881.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <TableView fx:id="tblAllActions" prefHeight="211.0" prefWidth="0.0" stylesheets="@assets/css/jfoenix-components.css" HBox.hgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="clmAllActionName" prefWidth="75.0" text="Alle acties" />
+                                                   </columns>
+                                                </TableView>
+                                                <VBox prefHeight="274.0" prefWidth="90.0" spacing="50.0">
+                                                   <children>
+                                                      <JFXButton fx:id="btnAddAction" onAction="#addAction" prefHeight="81.0" prefWidth="97.0" style="-fx-background-color: #114f8a;" styleClass="halloWerkDan" stylesheets="@assets/css/jfoenix-components.css" text="&gt;&gt;">
+                                                         <VBox.margin>
+                                                            <Insets left="25.0" top="30.0" />
+                                                         </VBox.margin>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="btnRemoveAction" onAction="#removeAction" prefHeight="90.0" prefWidth="83.0" style="-fx-background-color: #114f8a;" styleClass="halloWerkDan" stylesheets="@assets/css/jfoenix-components.css" text="&lt;&lt;">
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" left="25.0" />
+                                                         </VBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </HBox.margin>
+                                                   <padding>
+                                                      <Insets top="60.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <TableView fx:id="tblSelectedActions" prefHeight="211.0" prefWidth="5.0" stylesheets="@assets/css/jfoenix-components.css" HBox.hgrow="ALWAYS">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn fx:id="clmSelectedActionName" prefWidth="75.0" text="Geselecteerde Acties" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </HBox>
+                                          <HBox nodeOrientation="RIGHT_TO_LEFT" spacing="55.0">
+                                             <children>
+                                                <JFXButton buttonType="RAISED" onAction="#deleteAction" style="-fx-background-color: #fb4638;" styleClass="button-raised" stylesheets="@assets/css/jfoenix-components.css" text="Actie verwijderen" />
+                                                <JFXButton buttonType="RAISED" onAction="#EditAction" style="-fx-background-color: #ea7d2d;" styleClass="button-raised" stylesheets="@assets/css/jfoenix-components.css" text="Actie aanpassen" />
+                                                <JFXButton buttonType="RAISED" onAction="#newAction" style="-fx-background-color: #14a934;" styleClass="button-raised" stylesheets="@assets/css/jfoenix-components.css" text="Nieuwe actie" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #114f8a; -fx-padding: 0 105 0 105;" text="Oefeningen">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane maxWidth="959.0" prefHeight="710.0" prefWidth="959.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox layoutX="139.0" layoutY="183.0" prefHeight="298.0" prefWidth="699.0" AnchorPane.rightAnchor="121.0">
+                                       <children>
+                                          <TableView fx:id="tblAllExercise" prefHeight="330.0" prefWidth="290.0" stylesheets="@assets/css/jfoenix-components.css" HBox.hgrow="ALWAYS">
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                             <columns>
+                                                <TableColumn fx:id="clmALLClass" prefWidth="72.0" text="Vak" />
+                                                <TableColumn fx:id="clmAllName" prefWidth="178.0" text="Naam" />
+                                             </columns>
+                                          </TableView>
+                                          <VBox prefHeight="379.0" prefWidth="118.0" spacing="50.0" HBox.hgrow="SOMETIMES">
+                                             <children>
+                                                <JFXButton fx:id="btnSendToTemp" buttonType="RAISED" onAction="#sendToTemp" prefHeight="500.0" prefWidth="200.0" ripplerFill="#0c0eb2" style="-fx-background-color: #114f8a;" styleClass="halloWerkDan" stylesheets="@assets/css/jfoenix-components.css" text="&gt;&gt;" VBox.vgrow="ALWAYS">
+                                                   <VBox.margin>
+                                                      <Insets top="175.0" />
+                                                   </VBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnRemoveFromTemp" buttonType="RAISED" onAction="#removeFromTemp" prefHeight="500.0" prefWidth="200.0" ripplerFill="#090cb9" style="-fx-background-color: #114f8a;" styleClass="halloWerkDan" stylesheets="@assets/css/jfoenix-components.css" text="&lt;&lt;" VBox.vgrow="ALWAYS">
+                                                   <VBox.margin>
+                                                      <Insets bottom="150.0" />
+                                                   </VBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="40.0" top="-30.0" />
+                                             </padding>
+                                          </VBox>
+                                          <TableView fx:id="tblSelectedExercise" prefHeight="3000.0" prefWidth="300.0" stylesheets="@assets/css/jfoenix-components.css" HBox.hgrow="ALWAYS">
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                             <columns>
+                                                <TableColumn fx:id="clmSelectedClass" prefWidth="66.0" text="Vak" />
+                                                <TableColumn fx:id="clmSelectedName" prefWidth="184.0" text="Naam" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="179.0" layoutY="142.0" text="Beschikbare oefeningen" textFill="WHITE">
+                                       <font>
+                                          <Font name="Roboto" size="18.0" />
+                                       </font></Label>
+                                    <Label layoutX="570.0" layoutY="142.0" text="Geselecteerde oefeningen" textFill="WHITE">
+                                       <font>
+                                          <Font name="Roboto" size="18.0" />
+                                       </font></Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="50.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: #114f8a; -fx-padding: 0 105 0 105;" text="Overzicht">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtDescription1" focusColor="WHITE" labelFloat="true" layoutX="522.0" layoutY="126.0" maxWidth="339.0" prefHeight="35.0" prefWidth="294.0" promptText="Description" style="-fx-background-color: transparent;" stylesheets="@assets/css/style2.css" unFocusColor="WHITE" AnchorPane.leftAnchor="522.0" AnchorPane.rightAnchor="253.0">
+                                       <font>
+                                          <Font name="Roboto" size="24.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="wit" />
+                                          <String fx:value="witprompt" />
+                                          <String fx:value="avenir" />
+                                          <String fx:value="p" />
+                                       </styleClass>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txtName1" focusColor="WHITE" labelFloat="true" layoutX="255.0" layoutY="126.0" maxWidth="484.0" prefHeight="35.0" prefWidth="296.0" promptText="Name" style="-fx-background-color: transparent;" stylesheets="@assets/css/style2.css" unFocusColor="WHITE" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="518.0">
+                                       <font>
+                                          <Font name="Roboto" size="24.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="wit" />
+                                          <String fx:value="witprompt" />
+                                          <String fx:value="avenir" />
+                                          <String fx:value="p" />
+                                       </styleClass>
+                                    </JFXTextField>
+                                    <TableView fx:id="tblSelectedExercise1" layoutX="322.0" layoutY="282.0" prefHeight="350.0" prefWidth="315.0" stylesheets="@assets/css/jfoenix-components.css" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="322.0" AnchorPane.topAnchor="282.0">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <columns>
+                                          <TableColumn fx:id="clmSelectedClass1" prefWidth="157.0" text="Vak" />
+                                          <TableColumn fx:id="clmSelectedName1" prefWidth="156.0" text="Naam" />
+                                       </columns>
+                                    </TableView>
+                                    <TableView fx:id="tblSelectedActions1" layoutX="55.0" layoutY="281.0" prefHeight="350.0" prefWidth="200.0" stylesheets="@assets/css/jfoenix-components.css" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="281.0">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <columns>
+                                          <TableColumn fx:id="clmSelectedActionName1" prefWidth="75.0" text="Acties" />
+                                       </columns>
+                                    </TableView>
+                                    <TableView fx:id="tblGoals" layoutX="706.0" layoutY="281.0" prefHeight="350.0" prefWidth="200.0" stylesheets="@assets/css/jfoenix-components.css" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="706.0" AnchorPane.topAnchor="281.0">
+                                      <columns>
+                                        <TableColumn fx:id="clmCode" prefWidth="75.0" text="Codes" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Label layoutX="71.0" layoutY="241.0" text="Geselecteerde acties" textFill="WHITE">
+                                       <font>
+                                          <Font name="Roboto" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="375.0" layoutY="241.0" text="Geselecteerde oefeningen" textFill="WHITE">
+                                       <font>
+                                          <Font name="Roboto" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="717.0" layoutY="241.0" text="Bereikte doelstellingen" textFill="WHITE">
+                                       <font>
+                                          <Font name="Roboto" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs></JFXTabPane>
+            <HBox opacity="0.75" prefHeight="50.0" prefWidth="950.0">
+               <children>
+                  <AnchorPane prefHeight="45.0" prefWidth="319.0" HBox.hgrow="NEVER">
+                     <children>
+                        <JFXButton fx:id="btnSave" layoutX="223.0" layoutY="5.0" onAction="#saveBox" prefHeight="40.0" prefWidth="144.0" styleClass="button-raised2" stylesheets="@assets/css/jfoenix-components.css" text="Opslaan" AnchorPane.rightAnchor="250.0" />
+                        <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="342.0" layoutY="4.0" onAction="#cancel" prefHeight="40.0" prefWidth="144.0" styleClass="button-raised2" stylesheets="@assets/css/jfoenix-components.css" text="Cancel" AnchorPane.rightAnchor="83.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="-60.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="625.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</fx:root>

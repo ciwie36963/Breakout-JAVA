@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" type="StackPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXDrawer fx:id="testD" defaultDrawerSize="450.0" prefHeight="800.0" prefWidth="350.0">
+         <children>
+            <JFXDrawer fx:id="filterDrawer" defaultDrawerSize="450.0" prefHeight="800.0" prefWidth="350.0" />
+         </children></JFXDrawer>
+      <VBox prefHeight="800.0" prefWidth="1300.0">
+         <children>
+            <HBox fx:id="hBoxNavBar" prefHeight="50.0" prefWidth="1300.0" spacing="10.0" style="-fx-background-color: #144575;" stylesheets="@assets/css/style.css">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="54.0" onMouseClicked="#applyFilters" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/img/burger.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Bob Manager" textFill="WHITE" translateX="4.0" translateY="1.0">
+                     <font>
+                        <Font name="The Blacksmith" size="34.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="497.0" spacing="30.0" stylesheets="@assets/css/style.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label onMouseClicked="#goToBox" text="Box" textFill="WHITE" translateY="5.0">
+                           <font>
+                              <Font name="ConthraxSb-Regular" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label onMouseClicked="#goToEx" text="Oefening" textFill="WHITE" translateY="5.0">
+                           <font>
+                              <Font name="ConthraxSb-Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label onMouseClicked="#goToSessions" text="Sessie" textFill="WHITE" translateY="5.0">
+                           <font>
+                              <Font name="ConthraxSb-Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label onMouseClicked="#goToStudent" text="Student" textFill="WHITE" translateY="5.0">
+                           <font>
+                              <Font name="ConthraxSb-Regular" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="60.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="splitPane" prefHeight="750.0" prefWidth="1300.0">
+               <children>
+                  <HBox fx:id="paneLeft" prefHeight="750.0" prefWidth="350.0" />
+                  <HBox fx:id="paneRight" prefHeight="750.0" prefWidth="950.0" />
+               </children>
+            </HBox>
+         </children>
+         <stylesheets>
+            <URL value="@ComplexApplication.css" />
+         </stylesheets>
+      </VBox>
+   </children>
+</fx:root>

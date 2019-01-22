@@ -1,0 +1,154 @@
+.background{
+    -fx-background-image: url('../images/background.jpg');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center, center;
+}
+.glyph-icon{
+    -fx-fill: white;
+    -glyph-size: 25px;
+}
+.avenir{
+    -fx-font-family: 'Avenir';
+}
+.wit{
+    -fx-text-fill: #ffffff;
+}
+.zwart{
+    -fx-text-fill:black;
+}
+.h1{
+    -fx-font-size: 62px;
+}
+.h2{
+    -fx-font-size: 35px;
+}
+.h3{
+    -fx-font-size: 28px;
+}
+.h4{
+    -fx-font-size: 20px;
+}
+.p{
+    -fx-font-size: 16px;
+
+}
+.jfx-button{
+    -fx-font-family: 'Avenir';
+    -fx-font-size: 21px;
+
+}
+.schaduw{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+
+}
+.lichteschaduw{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 2, 0, 0, 0);
+
+}
+.jfx-list-view{
+    -fx-background-color: transparent;
+}
+.jfx-list-view .scroll-bar:horizontal .increment-arrow,
+.jfx-list-view .scroll-bar:horizontal .decrement-arrow,
+.jfx-list-view .scroll-bar:horizontal .increment-button,
+.jfx-list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.jfx-list-view .scroll-bar:vertical .increment-arrow,
+.jfx-list-view .scroll-bar:vertical .decrement-arrow,
+.jfx-list-view .scroll-bar:vertical .increment-button,
+.jfx-list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding:0;
+}
+.jfx-list-view .jfx-list-cell:even,.jfx-list-view .jfx-list-cell:odd  {
+    -fx-text-fill: #114f8a;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Avenir';
+}
+.jfx-list-view .jfx-list-cell:even:hover, .jfx-list-view .jfx-list-cell:odd:hover {
+    -fx-background-color: #114f8a;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+
+.jfx-list-view-selectie{
+    -fx-background-color: transparent;
+}
+.jfx-list-view-selectie .jfx-list-cell:even,.jfx-list-view-selectie .jfx-list-cell:odd  {
+    -fx-background-color: transparent;
+    -fx-text-fill: #114f8a;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Avenir';
+}
+.jfx-list-view-selectie .jfx-list-cell:even:hover, .jfx-list-view-selectie .jfx-list-cell:odd:hover {
+    -fx-background-color: #114f8a;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.nodebutton{
+    -fx-font-size:25px;
+    -fx-background-radius: 50px;
+    -fx-text-fill: white;
+}
+.bg-blue{
+    -fx-background-color:#10569e;
+}
+.bg-green{
+    -fx-background-color:#14a934;
+}
+.bg-red{
+    -fx-background-color:#fb4638;
+}
+.bg-orange{
+    -fx-background-color:#ea7d2d;
+}
+.uploadbutton{
+      -fx-background-color: cornflowerblue;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+.savebutton{
+   -fx-background-color: #14a934;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;  
+}
+.cancelbutton{
+   -fx-background-color: #fb4638;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;  
+}
+.witprompt{
+    -fx-prompt-text-fill: white;
+    -jfx-unfocus-color: white;-jfx-focus-color: white;
+}
+.chipp{
+    -fx-background-color:#ebf3fb;
+    -fx-text-fill: black;
+    -fx-background-radius: 20;
+    -fx-font-size: 11px;
+}
+.chippzwart{
+    -fx-fill: black;
+    -glyph-size: 12px;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+.combo-box .list-cell{
+    -fx-text-fill: white;
+}
+.combo-box .list-view .list-cell{
+    -fx-text-fill:#10569e;
+}
+.checkbox{
+    -jfx-unchecked-color: white;
+}
+.jfx-tab-pane .tab-header-background { 
+    -fx-background-color:  #114f8a; 
+}

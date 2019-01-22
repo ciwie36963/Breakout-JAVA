@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="AnchorPane" prefHeight="800.0" prefWidth="1300.0" stylesheets="@assets/css/jfoenix-components.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="vboxNavigatie" alignment="TOP_CENTER" layoutX="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="141.0" style="-fx-background-color: #144575;" styleClass="schaduw" stylesheets="@assets/css/style2.css">
+         <children>
+            <JFXButton fx:id="btnHome" onAction="#btnHomeOnAction" prefHeight="101.0" prefWidth="141.0" text="Breakout Manager" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <Line endX="100.0" startX="-29.0" stroke="WHITE" />
+            <JFXButton fx:id="btnSessies" contentDisplay="TOP" onAction="#btnSessiesOnAction" prefHeight="100.0" prefWidth="158.0" text="SESSIES" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <Line endX="100.0" stroke="WHITE" />
+            <JFXButton fx:id="btnBoxes" contentDisplay="TOP" onAction="#btnBoxesOnAction" prefHeight="100.0" prefWidth="158.0" text="BOXES" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="25.0" />
+               </graphic>
+            </JFXButton>
+            <Line endX="100.0" stroke="WHITE" />
+            <JFXButton fx:id="btnOefeningen" contentDisplay="TOP" onAction="#btnOefeningenOnAction" prefHeight="114.0" prefWidth="130.0" text="OEFEN." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LIST_OL" size="25" />
+               </graphic>
+            </JFXButton>
+            <Line endX="100.0" stroke="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</fx:root>

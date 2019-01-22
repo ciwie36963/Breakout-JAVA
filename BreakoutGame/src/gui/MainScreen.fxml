@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="AnchorPane" fx:id="AnchorPane" maxHeight="800.0" maxWidth="1300.0" minHeight="800.0" minWidth="1300.0" prefHeight="800.0" prefWidth="1300.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+      <stylesheets><URL value="@style.css" />
+    </stylesheets>
+    <children>
+      <Pane prefHeight="800.0" prefWidth="1300.0" styleClass="background" />
+      <StackPane fx:id="stpVoorAlert" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <HBox fx:id="hboxContent" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0">
+               <children>
+                  <VBox fx:id="vboxNavigatie" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="130.0" style="-fx-background-color: #144575;" styleClass="schaduw">
+                     <children>
+                        <JFXButton prefHeight="100.0" prefWidth="158.0" text="Breakout Manager" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </JFXButton>
+                        <Line endX="100.0" startX="-29.0" stroke="WHITE" />
+                        <JFXButton fx:id="btnSession" contentDisplay="TOP" onAction="#btnSessionOnAction" prefHeight="100.0" prefWidth="158.0" text="SESSIES" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/img/play.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Line endX="100.0" stroke="WHITE" />
+                        <JFXButton fx:id="btnBox" contentDisplay="TOP" onAction="#btnBoxStartScreen" prefHeight="100.0" prefWidth="158.0" text="BOXES" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/img/boxes.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Line endX="100.0" stroke="WHITE" />
+                        <JFXButton fx:id="btnExercise" contentDisplay="TOP" onAction="#btnExerciseStart" prefHeight="114.0" prefWidth="130.0" text="OEFEN." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/img/exercises.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Line endX="100.0" stroke="WHITE" />
+                        <JFXButton fx:id="btnStudent" contentDisplay="TOP" onAction="#btnStudentOnAction" prefHeight="114.0" prefWidth="130.0" text="STUDENT." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/img/students.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Line endX="100.0" stroke="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxGreeting" alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1150.0" styleClass="background" stylesheets="@assets/css/style2.css">
+                     <children>
+                        <Label fx:id="lblTitle" alignment="BOTTOM_CENTER" prefHeight="206.0" prefWidth="1150.0" text="Welkom op de BOB Manager" textAlignment="CENTER">
+                           <font>
+                              <Font name="Avenir Roman" size="75.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="h1" />
+                              <String fx:value="avenir" />
+                              <String fx:value="wit" />
+                           </styleClass>
+                        </Label>
+                        <Line endX="100.0" startX="-100.0" stroke="WHITE" translateY="30.0" />
+                        <Label fx:id="lblDatum" alignment="BOTTOM_CENTER" prefHeight="229.0" prefWidth="1150.0" text="Het is nu 12:00 uur. " textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Avenir Roman" size="75.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="h2" />
+                              <String fx:value="avenir" />
+                              <String fx:value="wit" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="lblInstruction" alignment="BOTTOM_CENTER" prefHeight="228.0" prefWidth="775.0" text="Klik op een van de acties om te beginnen." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Avenir Roman" size="75.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="h3" />
+                              <String fx:value="avenir" />
+                              <String fx:value="wit" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</fx:root>

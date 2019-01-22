@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox>
+         <children>
+            <Label fx:id="lblTitle" text="Doelstelling details" />
+            <JFXTextField fx:id="txtGoalName" styleClass="test">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font></JFXTextField>
+            <Label fx:id="lblError" text="Fout" textFill="#970808" visible="false" />
+            <HBox alignment="TOP_RIGHT" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="btnSave" onAction="#saveGoal" styleClass="button-raised" text="Opslaan" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</fx:root>

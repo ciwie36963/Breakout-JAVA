@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root id="AnchorPane" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="152.0" layoutY="129.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitle" text="Actie details" />
+            <JFXTextField fx:id="txtActionName" labelFloat="true" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Roboto" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Label fx:id="lblError" text="Fout" textFill="#970808" visible="false" />
+            <HBox alignment="TOP_RIGHT" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="btnSave" onAction="#saveAction" styleClass="button-raised" text="Opslaan">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="-15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</fx:root>

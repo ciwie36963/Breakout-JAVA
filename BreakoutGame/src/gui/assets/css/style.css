@@ -1,0 +1,19 @@
+#bg {
+    -fx-background-image: url("../img/navbar.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+#bg2 {
+    -fx-background-image: url("../img/navbarComp2.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
